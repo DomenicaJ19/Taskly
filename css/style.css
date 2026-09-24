@@ -1,0 +1,292 @@
+:root {
+  --bg: #f4f1ea;
+  --paper: #fffdf8;
+  --ink: #1f2430;
+  --muted: #5d6573;
+  --line: #e4ddd2;
+  --accent: #2f6f5e;
+  --accent-dark: #245748;
+  --coral: #c45c4a;
+  --today: #e8f3ee;
+  --shadow: 0 10px 30px rgba(31, 36, 48, 0.08);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Outfit, system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top right, #e8efe9 0, transparent 42%),
+    var(--bg);
+  color: var(--ink);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+.lede {
+  color: var(--muted);
+  margin: 8px 0 24px;
+  line-height: 1.5;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.tabs button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: white;
+}
+
+.primary {
+  border: 0;
+  background: var(--accent);
+  color: white;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 600;
+}
+
+.primary:hover {
+  background: var(--accent-dark);
+}
+
+.error {
+  color: var(--coral);
+  font-size: 14px;
+  min-height: 1.2em;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.user-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.ghost {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 999px;
+  padding: 8px 14px;
+}
+
+.add-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+
+.add-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1.4fr 180px auto;
+  gap: 10px;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(160px, 1fr));
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.day {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  min-height: 420px;
+  padding: 12px;
+}
+
+.day.today {
+  background: var(--today);
+  border-color: #c7ddd4;
+}
+
+.day h2 {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+.count {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.task {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.task.done h3 {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.notes {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.task-actions button {
+  border: 0;
+  background: #eef1ee;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.task-actions .danger {
+  color: var(--coral);
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 36, 48, 0.35);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.modal {
+  width: min(420px, 100%);
+  background: var(--paper);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 1100px) {
+  .add-row {
+    grid-template-columns: 1fr;
+  }
+
+  .week {
+    grid-template-columns: repeat(7, 220px);
+  }
+}
