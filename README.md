@@ -4,7 +4,7 @@ Taskly is a weekly task manager. Sign in, then add, view, edit, complete, and de
 
 ## Deployed app
 
-Coming soon (Netlify). Deploy once when the app is finished to stay within the free plan.
+[https://taskly-domenicaj.netlify.app](https://taskly-domenicaj.netlify.app)
 
 ## Demo video
 
@@ -21,7 +21,7 @@ Coming soon (unlisted YouTube, 3–5 minutes).
 
 - HTML, CSS, and JavaScript
 - [Back4App](https://www.back4app.com/) (Parse Server) for authentication and the database
-- [Netlify](https://www.netlify.com/) for hosting (after the app is complete)
+- [Netlify](https://www.netlify.com/) for hosting
 
 ## Setup instructions
 
